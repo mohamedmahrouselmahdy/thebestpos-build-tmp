@@ -1,0 +1,52 @@
+{
+  "title": "القبض",
+  "pay": "قبض",
+  "validate": "تأكيد",
+  "tenders": {
+    "cash": "نقدا",
+    "card_cib": "بطاقة بنكية",
+    "edahabia": "محفظة إلكترونية",
+    "baridimob": "إنستا باي",
+    "cheque": "صك",
+    "transfer": "تحويل",
+    "credit": "الآجل",
+    "voucher": "رصيد لدى المحل",
+    "change": "الباقي"
+  },
+  "needCustomer": "اختر العميل أولاً (F3) للدفع بالآجل أو برصيده لدى المحل.",
+  "voucherTile": "قسيمة شراء",
+  "typeReference": "المرجع",
+  "reference": {
+    "card_cib": "رقم الترخيص ({{method}})",
+    "edahabia": "رقم الترخيص ({{method}})",
+    "baridimob": "رقم العملية ({{method}})",
+    "cheque": "رقم الشيك",
+    "transfer": "مرجع التحويل",
+    "credit": "المرجع",
+    "voucher": "رقم القسيمة",
+    "change": "المرجع"
+  },
+  "cheque": { "bank": "البنك", "date": "تاريخ الشيك" },
+  "quickNote": "{{value}} ج.م",
+  "exact": "المبلغ بالضبط",
+  "totalTtc": "المجموع شامل الضريبة",
+  "stampDuty": "رسم الدمغة",
+  "totalDue": "الصافي للدفع",
+  "stampHint": "الدفع بالبطاقة يعفي من رسم الدمغة هذه: ",
+  "missing": "الباقي للدفع",
+  "change": "الباقي",
+  "unknown": "المبلغ لم يُحسب بعد: أكمل إدخال الدفع",
+  "printLang": "لغة الإيصال",
+  "printReceipt": "طباعة الإيصال",
+  "noPrinter": "لا توجد طابعة إيصالات: اضبطها في الإعدادات › العتاد.",
+  "exchangeCredit": "قيمة السلع المرجعة (استبدال):",
+  "shortage": "{{name}}: {{available}} في المخزون، {{needed}} مطلوبة",
+  "done": {
+    "title": "تم القبض",
+    "number": "الإيصال",
+    "refunded": "يُعاد للعميل",
+    "printing": "الإيصال تُطبع.",
+    "noReceipt": "من غير طباعة الإيصال.",
+    "newSale": "بيع جديد"
+  }
+}

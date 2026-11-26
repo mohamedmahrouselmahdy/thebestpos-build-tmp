@@ -1,0 +1,406 @@
+{
+  "id": "eg-2026.1",
+  "version": 1,
+  "validFrom": "2026-01-01",
+  "notes": [
+    "Egypt edition of the data pack (The Best POS). Values follow the Egyptian VAT law 67/2016 (standard rate 14%). Check with your accountant: rates are editable in Settings."
+  ],
+  "currency": {
+    "code": "EGP",
+    "minorUnits": 2,
+    "symbolAr": "ج.م",
+    "symbolFr": "EGP",
+    "symbolEn": "EGP"
+  },
+  "nifLengths": [
+    9,
+    15
+  ],
+  "vat": {
+    "rates": [
+      {
+        "code": "TVA19",
+        "rateBp": 1400,
+        "nameAr": "ضريبة القيمة المضافة 14%",
+        "nameFr": "TVA 14 %",
+        "nameEn": "VAT 14%",
+        "source": "Law 67/2016 art. 2"
+      },
+      {
+        "code": "EXO",
+        "rateBp": 0,
+        "nameAr": "معفى من الضريبة",
+        "nameFr": "Exonéré de TVA",
+        "nameEn": "VAT exempt",
+        "source": "Law 67/2016 art. 3 and schedule"
+      }
+    ]
+  },
+  "stampDuty": {
+    "exemptUpTo": 1000000000000,
+    "tranche": 10000,
+    "minimum": 0,
+    "brackets": [
+      {
+        "upTo": null,
+        "perTranche": 100
+      }
+    ],
+    "progressive": false,
+    "exemptTenders": [
+      "card_cib",
+      "edahabia",
+      "baridimob",
+      "cheque",
+      "transfer",
+      "credit"
+    ],
+    "source": "Not applied at the point of sale in Egypt (kept off)."
+  },
+  "ifu": {
+    "threshold": 800000000,
+    "autoEntrepreneurThreshold": 500000000,
+    "goodsRateBp": 500,
+    "servicesRateBp": 1200,
+    "autoEntrepreneurRateBp": 50,
+    "minimum": 3000000,
+    "autoEntrepreneurMinimum": 1000000,
+    "source": "Not used in the Egypt edition."
+  },
+  "zakat": {
+    "nisab": 46750000,
+    "hijriYear": 1448,
+    "rateBp": 250,
+    "source": "Approximate nisab (85 g of 24k gold at about 5,500 EGP per gram). Check the current gold price with Dar al-Ifta."
+  },
+  "regulated": {
+    "source": "No regulated price ceilings are preloaded in the Egypt edition.",
+    "items": []
+  },
+  "mobileOperators": [
+    {
+      "code": "vodafone",
+      "nameAr": "فودافون",
+      "nameFr": "Vodafone",
+      "nameEn": "Vodafone",
+      "prefixes": [
+        "010"
+      ]
+    },
+    {
+      "code": "etisalat",
+      "nameAr": "اتصالات",
+      "nameFr": "e&",
+      "nameEn": "e&",
+      "prefixes": [
+        "011"
+      ]
+    },
+    {
+      "code": "orange",
+      "nameAr": "أورانج",
+      "nameFr": "Orange",
+      "nameEn": "Orange",
+      "prefixes": [
+        "012"
+      ]
+    },
+    {
+      "code": "we",
+      "nameAr": "المصرية للاتصالات",
+      "nameFr": "WE",
+      "nameEn": "WE",
+      "prefixes": [
+        "015"
+      ]
+    }
+  ],
+  "fiscal": {
+    "g50": {
+      "form": "إقرار ضريبة القيمة المضافة الشهري",
+      "boxes": {
+        "caHt9": "1",
+        "exempt9": "2",
+        "taxable9": "3",
+        "tva9": "4",
+        "caHt19": "5",
+        "exempt19": "6",
+        "taxable19": "7",
+        "tva19": "8",
+        "caHtTotal": "9",
+        "exemptTotal": "10",
+        "taxableTotal": "11",
+        "tvaTotal": "12",
+        "stampDuty": "§4"
+      },
+      "exemptBlock": "19",
+      "source": "Egyptian monthly VAT return (Egyptian Tax Authority)."
+    },
+    "cashDeductionLimit": 100000000,
+    "retentionYears": 10,
+    "source": "Egyptian Tax Authority rules; check with your accountant."
+  },
+  "scaleBarcodes": {
+    "source": "GS1 General Specifications: prefixes 20-29 are restricted-circulation numbers whose layout each GS1 member organisation sets; GS1 Algeria publishes none (docs/research/05 §4.2), so these are the default layouts of the Rongta RLS, ACLAS LS and Dibal scales sold in Algeria. Prefix 20 stays for in-store product codes (products.internal_ean_prefix).",
+    "defaultLayouts": [
+      {
+        "prefix": "21",
+        "pluDigits": 5,
+        "verifier": false,
+        "value": "weight",
+        "valueDigits": 5,
+        "decimals": 3
+      },
+      {
+        "prefix": "22",
+        "pluDigits": 5,
+        "verifier": false,
+        "value": "price",
+        "valueDigits": 5,
+        "decimals": 0
+      },
+      {
+        "prefix": "27",
+        "pluDigits": 5,
+        "verifier": false,
+        "value": "weight",
+        "valueDigits": 5,
+        "decimals": 3
+      },
+      {
+        "prefix": "28",
+        "pluDigits": 5,
+        "verifier": false,
+        "value": "price",
+        "valueDigits": 5,
+        "decimals": 0
+      },
+      {
+        "prefix": "29",
+        "pluDigits": 4,
+        "verifier": true,
+        "value": "weight",
+        "valueDigits": 5,
+        "decimals": 3
+      }
+    ]
+  },
+  "wilayas": [
+    {
+      "code": "01",
+      "nameFr": "Le Caire",
+      "nameAr": "القاهرة",
+      "nameEn": "Cairo",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "02",
+      "nameFr": "Gizeh",
+      "nameAr": "الجيزة",
+      "nameEn": "Giza",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "03",
+      "nameFr": "Alexandrie",
+      "nameAr": "الإسكندرية",
+      "nameEn": "Alexandria",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "04",
+      "nameFr": "Qalyubia",
+      "nameAr": "القليوبية",
+      "nameEn": "Qalyubia",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "05",
+      "nameFr": "Charqiya",
+      "nameAr": "الشرقية",
+      "nameEn": "Sharqia",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "06",
+      "nameFr": "Dakahlia",
+      "nameAr": "الدقهلية",
+      "nameEn": "Dakahlia",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "07",
+      "nameFr": "Beheira",
+      "nameAr": "البحيرة",
+      "nameEn": "Beheira",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "08",
+      "nameFr": "Menoufia",
+      "nameAr": "المنوفية",
+      "nameEn": "Monufia",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "09",
+      "nameFr": "Gharbia",
+      "nameAr": "الغربية",
+      "nameEn": "Gharbia",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "10",
+      "nameFr": "Kafr el-Cheikh",
+      "nameAr": "كفر الشيخ",
+      "nameEn": "Kafr El Sheikh",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "11",
+      "nameFr": "Damiette",
+      "nameAr": "دمياط",
+      "nameEn": "Damietta",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "12",
+      "nameFr": "Port-Saïd",
+      "nameAr": "بورسعيد",
+      "nameEn": "Port Said",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "13",
+      "nameFr": "Ismaïlia",
+      "nameAr": "الإسماعيلية",
+      "nameEn": "Ismailia",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "14",
+      "nameFr": "Suez",
+      "nameAr": "السويس",
+      "nameEn": "Suez",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "15",
+      "nameFr": "Nord-Sinaï",
+      "nameAr": "شمال سيناء",
+      "nameEn": "North Sinai",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "16",
+      "nameFr": "Sud-Sinaï",
+      "nameAr": "جنوب سيناء",
+      "nameEn": "South Sinai",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "17",
+      "nameFr": "Fayoum",
+      "nameAr": "الفيوم",
+      "nameEn": "Fayoum",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "18",
+      "nameFr": "Beni Souef",
+      "nameAr": "بني سويف",
+      "nameEn": "Beni Suef",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "19",
+      "nameFr": "Minya",
+      "nameAr": "المنيا",
+      "nameEn": "Minya",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "20",
+      "nameFr": "Assiout",
+      "nameAr": "أسيوط",
+      "nameEn": "Assiut",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "21",
+      "nameFr": "Sohag",
+      "nameAr": "سوهاج",
+      "nameEn": "Sohag",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "22",
+      "nameFr": "Qena",
+      "nameAr": "قنا",
+      "nameEn": "Qena",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "23",
+      "nameFr": "Louxor",
+      "nameAr": "الأقصر",
+      "nameEn": "Luxor",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "24",
+      "nameFr": "Assouan",
+      "nameAr": "أسوان",
+      "nameEn": "Aswan",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "25",
+      "nameFr": "Mer Rouge",
+      "nameAr": "البحر الأحمر",
+      "nameEn": "Red Sea",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "26",
+      "nameFr": "Nouvelle-Vallée",
+      "nameAr": "الوادي الجديد",
+      "nameEn": "New Valley",
+      "since": 1900,
+      "splitFrom": null
+    },
+    {
+      "code": "27",
+      "nameFr": "Matrouh",
+      "nameAr": "مطروح",
+      "nameEn": "Matrouh",
+      "since": 1900,
+      "splitFrom": null
+    }
+  ]
+}

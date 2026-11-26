@@ -1,0 +1,47 @@
+# CodeQL code scanning: the React/TypeScript UI and scripts, the Rust workspace and these
+# workflows. Results land in the Security tab (Code scanning).
+name: CodeQL
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+    # Code scanning needs GitHub Code Security, which a private repository on the free plan does
+    # not have: the job is skipped until the repository is public, so no minutes are spent on an
+    # upload that would be refused. Rust is analysed on Linux without a build (the app is
+    # Windows-only), so a partial Rust extraction never fails the run.
+    if: ${{ !github.event.repository.private }}
+    continue-on-error: ${{ matrix.language == 'rust' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [actions, javascript-typescript, rust]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: github/codeql-action/init@v4
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+          queries: security-extended
+      - uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:${{ matrix.language }}

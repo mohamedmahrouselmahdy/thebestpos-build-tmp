@@ -1,0 +1,70 @@
+/* The Best POS "Fodo" look: dark charcoal, big bevelled cyan text tiles, a vertical cyan category
+   strip at the inline-start edge of the till (the right in Arabic). Dark theme only. */
+:root[data-theme="dark"] body {
+  background: linear-gradient(160deg, #2a2d36, #15171c 70%);
+}
+:root[data-theme="dark"] {
+  --pos-tile: 9.4rem;
+}
+:root[data-theme="dark"] .pos-grid-root {
+  flex-direction: row;
+  gap: 0.875rem;
+}
+:root[data-theme="dark"] .pos-cats {
+  flex-direction: column;
+  flex: none;
+  width: 8.25rem;
+  overflow-x: visible;
+  overflow-y: auto;
+  gap: 0.625rem;
+}
+:root[data-theme="dark"] .pos-cats > button {
+  width: 100%;
+  min-height: 3.9rem;
+  border: 0;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, #1aa6d4, #0b7fb0);
+  opacity: 0.85;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+:root[data-theme="dark"] .pos-cats > button[aria-checked="true"] {
+  background: linear-gradient(180deg, #26c0ea, #0d93c7);
+  opacity: 1;
+  outline: 2px solid #6fd8f5;
+}
+:root[data-theme="dark"] .pos-tile {
+  border: 2px solid #6fd8f5;
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #2bc3ee, #0d93c7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 4px 10px rgba(0, 0, 0, 0.45);
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+}
+:root[data-theme="dark"] .pos-tile > :first-child {
+  display: none;
+}
+:root[data-theme="dark"] .pos-tile * {
+  color: #fff;
+  text-align: center;
+}
+:root[data-theme="dark"] .pos-tile span.line-clamp-2 {
+  font-size: 1.0625rem;
+  font-weight: 800;
+}
+:root[data-theme="dark"] .pos-tile:hover {
+  border-color: #fff;
+  filter: brightness(1.08);
+}
+:root[data-theme="dark"] #pos-scan {
+  background: #fff;
+  color: #111;
+}
+:root[data-theme="dark"] #pos-scan::placeholder {
+  color: #555;
+}

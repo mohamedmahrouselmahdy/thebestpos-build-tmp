@@ -1,0 +1,65 @@
+{
+  "title": "Zakat",
+  "intro": "An estimate of the zakat on your trade goods: the figures the software knows, plus what you add, against the nisab you enter.",
+  "inputs": "What you add",
+  "day": "Calculation date",
+  "hijri": "Hijri date",
+  "valuation": {
+    "label": "Stock value",
+    "cost": "at cost",
+    "sale_price": "at sale price"
+  },
+  "bank": "Bank and Egypt Post",
+  "otherAssets": "Other assets",
+  "otherDebts": "Other debts",
+  "note": "Note",
+  "preview": "Calculation",
+  "computing": "Calculating…",
+  "lines": {
+    "stock": "Stock ({{valuation}})",
+    "cash": "Cash in the drawers",
+    "bank": "Bank and Egypt Post",
+    "otherAssets": "Other assets",
+    "receivables": "What customers owe you",
+    "payables": "What you owe suppliers",
+    "otherDebts": "Other debts"
+  },
+  "base": "Base",
+  "nisab": "Nisab",
+  "nisabSource": "Source: {{source}}",
+  "nisabByShop": "entered by the shop",
+  "nisabCard": {
+    "title": "Nisab of the year",
+    "help": "Enter the nisab the Ministry of Religious Affairs publishes for the current Hijri year. The software never fills it in: the calculation uses only the figure you type. Update it each new Hijri year.",
+    "amount": "Nisab (EGP)",
+    "notSet": "Not entered yet.",
+    "source": "Source",
+    "sourceHint": "For your records, for example “Ministry of Religious Affairs, 1447”.",
+    "save": "Save the nisab",
+    "saved": "Nisab saved.",
+    "ownerOnly": "Only a user allowed to change the shop's settings can enter the nisab.",
+    "mainPcOnly": "The nisab is entered on the main PC."
+  },
+  "nisabMissing": {
+    "title": "Enter the nisab first",
+    "body": "The calculation starts once the nisab of the current Hijri year is entered in “Nisab of the year”."
+  },
+  "rate": "Rate",
+  "due": "Zakat due",
+  "belowNisab": "The base is below the nisab: no zakat is due.",
+  "disclaimer": "An indicative calculation made by the software. It is not a fatwa; when in doubt, ask a scholar or your governorate's religious affairs directorate.",
+  "save": "Save the calculation",
+  "recorded": "Calculation {{number}} saved",
+  "saved": "Saved calculations",
+  "savedEmpty": "No saved calculation. Save today's to keep and print it.",
+  "print": "Print",
+  "printed": "Zakat calculation sent to the printer.",
+  "columns": {
+    "number": "No.",
+    "day": "Date",
+    "base": "Base",
+    "due": "Zakat",
+    "by": "By"
+  },
+  "mainPcOnly": "Calculations are saved and kept on the main PC."
+}

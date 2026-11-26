@@ -1,0 +1,60 @@
+{
+  "title": "Set up The Best POS",
+  "progress": "Step {{step}} of {{total}}",
+  "steps": {
+    "language": "Language",
+    "shop": "Shop",
+    "owner": "Owner",
+    "printer": "Printer",
+    "scale": "Scale"
+  },
+  "language": {
+    "title": "Choose the language of the app",
+    "hint": "You can change it at any time, and each user can have their own."
+  },
+  "shop": {
+    "title": "Your shop",
+    "name": "Shop name",
+    "activity": "Activity",
+    "regime": "VAT",
+    "regimeIfu": "No VAT (prices are final)",
+    "regimeIfuHint": "The price typed is the price paid; no VAT appears on your documents. For shops that do not charge VAT.",
+    "regimeReel": "VAT enabled (14% under Egyptian law)",
+    "regimeReelHint": "VAT is calculated and shown on invoices. You can edit the rates in Settings or turn VAT off at any time.",
+    "priceMode": "Prices are typed",
+    "priceTtc": "All taxes included",
+    "priceHt": "Before tax",
+    "governorate": "Governorate",
+    "wilayaNone": "Choose later",
+    "phone": "Phone",
+    "optional": "(optional)"
+  },
+  "owner": {
+    "title": "The owner's account",
+    "hint": "The owner can do everything and manages the other users.",
+    "name": "Your name",
+    "pin": "PIN code (4 to 8 digits)",
+    "pinConfirm": "Type the PIN again"
+  },
+  "printer": {
+    "title": "Receipt printer",
+    "hint": "Plug in and switch on the printer, then detect it. You can change it in Settings › Hardware.",
+    "none": "No printer found. Install its Windows driver and detect again, or skip this step.",
+    "likely": "Likely a receipt printer",
+    "skip": "Skip for now"
+  },
+  "skip": "Skip",
+  "finish": "Finish and open the app",
+  "free": {
+    "note": "The Best POS is free forever. Want a website for your shop too?",
+    "link": "tbtech-eg.com/register"
+  },
+  "first": {
+    "demo": "Try it with a demo shop",
+    "import": "Move my shop from another PC (.dzpos file)",
+    "tour": "Watch the tour (2 minutes)",
+    "openingDemo": "Opening the demo…",
+    "restoring": "Restoring your shop…",
+    "importHint": "Stop selling on the old PC: both would number the same tickets. For a second till, choose \"Till of a shop\"."
+  }
+}
